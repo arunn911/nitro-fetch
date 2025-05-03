@@ -41,7 +41,7 @@ Include the minified UMD bundle in your HTML:
 or 
 
 ```html
-<script src="https://unpkg.com/nitro-fetch@1.0.0/dist/umd/nitro-fetch.min.js"></script>
+<script src="https://unpkg.com/nitro-fetch@1.0.1/dist/umd/nitro-fetch.min.js"></script>
 
 ```
 
