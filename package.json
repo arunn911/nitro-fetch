@@ -28,7 +28,15 @@
     "api",
     "endpoint"
   ],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arunn911/nitro-fetch"
+  },
+  "bugs": {
+    "url": "https://github.com/arunn911/nitro-fetch/issues"
+  },
+  "homepage": "https://nitro-fetch.netlify.app",
+  "author": "Arunkuamr",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
