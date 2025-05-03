@@ -1,0 +1,46 @@
+{
+  "name": "nitro-fetch",
+  "version": "1.0.1",
+  "description": "A lightweight HTTP client library inspired by Axios",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/umd/nitro-fetch.min.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:bundles": "rollup -c",
+    "build": "npm run build:bundles && npm run build:types",
+    "test": "jest",
+    "prepare": "npm run build"  
+  },
+  "keywords": [
+    "http",
+    "client",
+    "fetch",
+    "axios",
+    "request",
+    "retry",
+    "interceptor",
+    "api",
+    "endpoint"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.19",
+    "jest": "^29.7.0",
+    "rollup": "^4.9.6",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitro Fetch Example</title>
+</head>
+<body>
+    <h1>Nitro Fetch Example</h1>
+    <div id="result"></div>
+
+    <!-- Include the minified UMD bundle -->
+    <script src="../dist/umd/nitro-fetch.min.js"></script>
+    <script>
+        // Create a new instance
+        const client = NitroFetch.create({
+            baseURL: 'https://jsonplaceholder.typicode.com',
+            retry: {
+                count: 3,
+                delay: 1000
+            }
+        });
+
+        // Example usage
+        async function fetchData() {
+            try {
+                const response = await client.get('/todos/1');
+                document.getElementById('result').innerHTML = `
+                    <pre>${JSON.stringify(response.data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                document.getElementById('result').innerHTML = `
+                    <p style="color: red">Error: ${error.message}</p>
+                `;
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+</html> 
